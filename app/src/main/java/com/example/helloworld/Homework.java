@@ -8,7 +8,7 @@ public class Homework {
     }
 
     static void task1() {
-        System.out.println("Введите число:");
+        System.out.println("Введите число: ");
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         if (a % 2 == 0) {
