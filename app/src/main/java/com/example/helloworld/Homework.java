@@ -8,6 +8,14 @@ public class Homework {
         task1();
         task2();
         task3();
+        task4();
+    }
+
+    static void task4() {
+        for (int i = 0; i <= 100; i+=5){
+            if(i == 0) continue;
+            System.out.println(i);
+        }
     }
 
     static void task3() {
