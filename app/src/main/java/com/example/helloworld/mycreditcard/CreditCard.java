@@ -14,9 +14,9 @@ public class CreditCard {
     }
 
     public void minus(double minus) {
-        if(currentBalance >= minus && minus !=0){
+        if (currentBalance >= minus && minus != 0) {
             currentBalance -= minus;
-        }else {
+        } else {
             System.out.println("You don't have enough money");
         }
     }
