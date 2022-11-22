@@ -6,7 +6,7 @@ public class MyCreditApp {
     public static void main(String[] args) {
         CreditCard creditCardOne = new CreditCard(1251,458);
         CreditCard creditCardTwo = new CreditCard(1252,0);
-        CreditCard creditCardThree = new CreditCard(1253, 8858);
+        CreditCard creditCardThree = new CreditCard(1253, 0);
 
         creditCardOne.printInfo();
         creditCardTwo.printInfo();

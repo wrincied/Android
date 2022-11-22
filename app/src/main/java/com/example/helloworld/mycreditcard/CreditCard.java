@@ -11,9 +11,14 @@ public class CreditCard {
     int plus(int sum){
         return currentBalance += sum;
     }
-    int minus(int sum){
-        return currentBalance -= sum;
+    int minus(int minus){
+        if(minus > currentBalance){
+            minus = 0;
+            System.out.println("You don't have enough funds");
+        }
+        return currentBalance -= minus;
     }
+
     void printInfo(){
         System.out.println("Account Number: " + accountNumber +  " | "  +  " Current Balance: " + currentBalance);
     }
