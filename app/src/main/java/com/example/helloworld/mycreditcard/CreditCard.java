@@ -8,19 +8,21 @@ public class CreditCard {
         this.accountNumber = accountNumber;
         this.currentBalance = currentSum;
     }
-    int plus(int sum){
-        return currentBalance += sum;
-    }
-    int minus(int minus){
-        if(minus > currentBalance){
-            minus = 0;
-            System.out.println("You don't have enough funds");
-        }
-        return currentBalance -= minus;
+
+    public void plus(int sum) {
+        currentBalance += sum;
     }
 
-    void printInfo(){
-        System.out.println("Account Number: " + accountNumber +  " | "  +  " Current Balance: " + currentBalance);
+    public void minus(double minus) {
+        if(currentBalance >= minus && minus !=0){
+            currentBalance -= minus;
+        }else {
+            System.out.println("You don't have enough money");
+        }
+    }
+
+    void printInfo() {
+        System.out.println("Account Number: " + accountNumber + " | " + " Current Balance: " + currentBalance);
     }
 
     public int getAccountNumber() {
