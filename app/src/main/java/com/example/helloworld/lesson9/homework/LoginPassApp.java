@@ -37,10 +37,7 @@ public class LoginPassApp {
         if (!login.matches(INPUT_DATA)) {
             throw new WrongLoginException("The length of login must be less than 20 characters.");
         } else if (!password.matches(INPUT_DATA) || !password.equals(confirmPass)) {
-            throw new WrongPasswordException(
-                    "Password must contain only latin letters, numbers and underscores." +
-                            "The password length must be less than 20 characters."
-            );
+            throw new WrongPasswordException("Password must contain only latin letters, numbers and underscores." + "The password length must be less than 20 characters.");
         } else {
             return true;
         }
