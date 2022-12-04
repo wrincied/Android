@@ -10,25 +10,33 @@ public class LoginPassApp {
     }
 
     public static void registration() {
+        while (true) {
+
             Scanner in = new Scanner(System.in);
-            System.out.print("Enter your Login: ");
+            System.out.println("Enter your Login: ");
             String login = in.nextLine();
-            System.out.print("Enter your Password: ");
+            System.out.println("Enter your Password: ");
             String password = in.nextLine();
+            System.out.println("Confirm your Password: ");
+            String confirmPass = in.nextLine();
             try {
-                if (checkLoginAndPassword(login, password, "Password_pass_1313")) {
-                    System.out.println("Correct Username and  Password");
-
+                if (checkLoginAndPassword(login, password, confirmPass)) {
+                    System.out.println("Correct Username and Password");
                 }
-            } catch (WrongLoginException | WrongPasswordException e) {
-                System.out.println(e.getMessage());
+                break;
+            } catch (WrongLoginException e) {
+                System.err.println(e.getMessage());
+            } catch (WrongPasswordException c) {
+                System.err.println(c.getMessage());
             }
+            System.err.println("Repeat data entry");
         }
+    }
 
-    private static boolean checkLoginAndPassword(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
+    private static boolean checkLoginAndPassword(String login, String password, String confirmPass) throws WrongLoginException, WrongPasswordException {
         if (!login.matches(INPUT_DATA)) {
             throw new WrongLoginException("The length of login must be less than 20 characters.");
-        } else if (!password.matches(INPUT_DATA) || !password.equals(confirmPassword)) {
+        } else if (!password.matches(INPUT_DATA) || !password.equals(confirmPass)) {
             throw new WrongPasswordException(
                     "Password must contain only latin letters, numbers and underscores." +
                             "The password length must be less than 20 characters."
