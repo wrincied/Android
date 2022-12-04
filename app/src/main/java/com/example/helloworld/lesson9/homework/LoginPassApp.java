@@ -11,7 +11,6 @@ public class LoginPassApp {
 
     public static void registration() {
         while (true) {
-
             Scanner in = new Scanner(System.in);
             System.out.println("Enter your Login: ");
             String login = in.nextLine();
