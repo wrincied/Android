@@ -13,7 +13,7 @@ public class Dog extends Pet {
     }
 
     @Override
-    public void printInfoAboutPet() {
-        System.out.println("Dog name: " + getName() + "Dog breed: " + getBreed() + "Dog food: " + getDogFood() + "Dog gender: " + getGender());
+    public void printInfoAboutAnimal() {
+        System.out.println("Dog name: " + getName() + '\n' + "Dog breed: " + getBreed() + '\n' + "Dog food: " + getDogFood() + '\n' + "Dog gender: " + getGender());
     }
 }

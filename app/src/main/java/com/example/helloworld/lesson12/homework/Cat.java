@@ -1,7 +1,5 @@
 package com.example.helloworld.lesson12.homework;
 
-import java.util.Objects;
-
 public class Cat extends Pet {
     private String catFood;
 
@@ -15,7 +13,7 @@ public class Cat extends Pet {
     }
 
     @Override
-    public void printInfoAboutPet() {
-        System.out.println("Cat name: " + getName() + "Cat breed: " + getBreed() + "Cat food: " + getCatFood() + "Cat gender" + getGender());
+    public void printInfoAboutAnimal() {
+        System.out.println("Cat name: " + getName() + '\n' + "Cat breed: " + getBreed() + '\n' + "Cat food: " + getCatFood() + '\n' + "Cat gender: " + getGender());
     }
 }

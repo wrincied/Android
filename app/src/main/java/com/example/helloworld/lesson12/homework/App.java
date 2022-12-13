@@ -1,11 +1,14 @@
 package com.example.helloworld.lesson12.homework;
 
+import org.w3c.dom.Attr;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class App {
     private final static Scanner SCANNER = new Scanner(System.in);
+    static HashMap<String, Pet> animals = new HashMap<>();
 
 
     public static void main(String[] args) {
@@ -15,32 +18,24 @@ public class App {
         Pet dogTwo = new Dog("Malina", "Pudel", "Female", "Purina");
         Pet horseOne = new Horse("Pegasus", "Adenauer", "Male", "Hay");
 
-        putNewAnimal(catOne);
-        putNewAnimal(catTwo);
-        putNewAnimal(dogOne);
-        putNewAnimal(dogTwo);
-        putNewAnimal(horseOne);
 
-        printAnimalsInfo();
+        animals.put(catOne.getName(), catOne);
+        animals.put(catTwo.getName(), catTwo);
+        animals.put(dogOne.getName(), dogOne);
+        animals.put(dogTwo.getName(), dogTwo);
+        animals.put(horseOne.getName(), horseOne);
+        printInfoAboutAllAnimals();
 
         System.out.print("Enter the name of the animal you want to delete: ");
         removeAnimalByName();
-        printAnimalsInfo();
+        printInfoAboutAllAnimals();
     }
 
-    static HashMap<String, Pet> animals = new HashMap<>();
-
-
-    private static void printAnimalsInfo() {
-        System.out.println("List of Animals");
-        for (Map.Entry<String, Pet> animal : animals.entrySet()) {
-            if (animal.getValue() instanceof Cat) {
-                System.out.println("Cat name: " + animal.getValue().getName() + "\n" + "  Breed: " + animal.getValue().getBreed() + ";\n" + "  Gender: " + ((Cat) animal.getValue()).getGender() + ";\n" + "  Food: " + ((Cat) animal.getValue()).getCatFood() + ";\n");
-            } else if (animal.getValue() instanceof Dog) {
-                System.out.println("Dog name: " + animal.getValue().getName() + "\n" + "  Breed: " + animal.getValue().getBreed() + ";\n" + "  Gender: " + ((Dog) animal.getValue()).getGender() + ";\n" + "  Food: " + ((Dog) animal.getValue()).getDogFood() + ";\n");
-            } else if (animal.getValue() instanceof Horse) {
-                System.out.println("Horse name: " + animal.getValue().getName() + "\n" + "  Breed: " + animal.getValue().getBreed() + ";\n" + "  Gender: " + ((Horse) animal.getValue()).getGender() + ";\n" + "  Food: " + ((Horse) animal.getValue()).getHorseFood() + ";\n");
-            }
+    private static void printInfoAboutAllAnimals() {
+        System.out.println("List of animal");
+        for (Pet pet : animals.values()) {
+            System.out.print('\n');
+            pet.printInfoAboutAnimal();
         }
     }
 
@@ -56,9 +51,5 @@ public class App {
                 System.out.println("Invalid input. Retry the operation.");
             }
         }
-    }
-
-    static void putNewAnimal(Pet pet) {
-        animals.put(pet.getName(), pet);
     }
 }

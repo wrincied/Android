@@ -2,7 +2,7 @@ package com.example.helloworld.lesson12.homework;
 
 import java.util.Objects;
 
-public class Pet {
+abstract class Pet {
     private String name;
     private String breed;
     private String gender;
@@ -25,9 +25,7 @@ public class Pet {
         return gender;
     }
 
-    public void printInfoAboutPet() {
-
-    }
+    abstract void printInfoAboutAnimal();
 
     @Override
     public boolean equals(Object o) {
@@ -40,5 +38,9 @@ public class Pet {
     @Override
     public int hashCode() {
         return Objects.hash(name, breed, gender);
+    }
+
+
+    public void printAnimalsInfo() {
     }
 }

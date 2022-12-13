@@ -14,7 +14,7 @@ public class Horse extends Pet {
     }
 
     @Override
-    public void printInfoAboutPet() {
-        System.out.println("Horse name: " + getName() + "Horse breed: " + getBreed() + "Horse food: " + getHorseFood() + "Horse gender: " + getGender());
+    public void printInfoAboutAnimal() {
+        System.out.println("Horse name: " + getName() + '\n' + "Horse breed: " + getBreed() + '\n' + "Horse food: " + getHorseFood() + '\n' + "Horse gender: " + getGender());
     }
 }
