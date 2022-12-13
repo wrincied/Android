@@ -8,7 +8,6 @@ public class App {
     private final static Scanner SCANNER = new Scanner(System.in);
     static HashMap<String, Pet> animals = new HashMap<>();
 
-
     public static void main(String[] args) {
         Pet catOne = new Cat("Whiskers", "Abyssinian Cat", "Male", "Purina");
         Pet catTwo = new Cat("Felix", "Birman Cat", "Male", "Purina");

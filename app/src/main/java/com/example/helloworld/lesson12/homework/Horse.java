@@ -6,7 +6,6 @@ public class Horse extends Pet {
     public Horse(String name, String breed, String gender, String horseFood) {
         super(name, breed, gender);
         this.horseFood = horseFood;
-
     }
 
     public String getHorseFood() {

@@ -40,7 +40,6 @@ abstract class Pet {
         return Objects.hash(name, breed, gender);
     }
 
-
     public void printAnimalsInfo() {
     }
 }
