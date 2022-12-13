@@ -36,7 +36,6 @@ public class App {
         }
     }
 
-
     private static void removeAnimalByName() {
         while (true) {
             String nameOfAnimalToDelete = SCANNER.nextLine();
