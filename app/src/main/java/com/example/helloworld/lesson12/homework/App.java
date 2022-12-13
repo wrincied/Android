@@ -1,9 +1,7 @@
 package com.example.helloworld.lesson12.homework;
 
-import org.w3c.dom.Attr;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class App {
