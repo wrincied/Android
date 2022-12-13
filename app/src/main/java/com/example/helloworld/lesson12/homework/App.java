@@ -1,6 +1,5 @@
 package com.example.helloworld.lesson12.homework;
 
-
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -14,7 +13,6 @@ public class App {
         Pet dogOne = new Dog("Muhtar", "German shepherd", "Male", "Purina");
         Pet dogTwo = new Dog("Malina", "Pudel", "Female", "Purina");
         Pet horseOne = new Horse("Pegasus", "Adenauer", "Male", "Hay");
-
 
         animals.put(catOne.getName(), catOne);
         animals.put(catTwo.getName(), catTwo);
