@@ -32,7 +32,12 @@ public class App {
     private static int enterAmountOfNumbers() {
         System.out.print("Enter the desired number of random numbers in the collection: ");
         while (true) {
-            return SCANNER.nextInt();
+            try {
+                return SCANNER.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid Input. Try again");
+                SCANNER.nextLine();
+            }
         }
     }
 
