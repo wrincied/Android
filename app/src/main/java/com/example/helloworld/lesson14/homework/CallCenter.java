@@ -12,6 +12,7 @@ public class CallCenter {
         for (int i = 0; i < AMOUNT_OF_CALLS; i++) {
             acceptCallList.add(new acceptCall());
         }
+        
         Runnable myRunnable = () -> {
             for (int callNumber = 0; callNumber < AMOUNT_OF_CALLS; callNumber++) {
                 acceptCallList.add(new acceptCall());
@@ -28,6 +29,7 @@ public class CallCenter {
                 }
             }
         };
+        
         Thread workerThreadOne = new Thread(myRunnable);
         Thread workerThreadTwo = new Thread(myRunnable);
         Thread workerThreadThree = new Thread(myRunnable);
